@@ -98,7 +98,10 @@ public class ClientGUI {
                     textArea1.append(split);
                 }
                 isStart = true;
+                textArea1.append("You said:\n\t");
                 String input = textField1.getText();
+                textArea1.append(input);
+                textArea1.append("\n");
                 output = client.senderGUI.send(input);
                 textArea1.append(output);
                 textField1.setText("");

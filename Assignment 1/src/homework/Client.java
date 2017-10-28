@@ -52,12 +52,14 @@ class Sender implements Runnable {
             try {
                 socket = new DatagramSocket();
                 BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+                System.out.print("Your command: ");
                 String path = reader.readLine();
                 outBuff = path.getBytes();
                 packet = new DatagramPacket(outBuff, outBuff.length, Sender.ADDR, Sender.PORT);
                 socket.send(packet);
                 socket.receive(received);
                 String output = makeString(received);
+                System.out.println("Server said:");
                 System.out.println(output);
             } catch (SocketException e) {
                 e.printStackTrace();
