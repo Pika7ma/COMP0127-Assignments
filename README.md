@@ -1,4 +1,4 @@
-# COMP0127-Assignments
+# Computer Networks
 
 *The assignments of COMP0127 "Computer Networks" by Professor Jianzhong Zhang and Professor Jingdong Xu.*
 
